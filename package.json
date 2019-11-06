@@ -1,0 +1,16 @@
+{
+  "name": "arbetsmyra.github.io",
+  "version": "0.0.0",
+  "description": "Arbetsmyra's GitHub page",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arbetsmyra/arbetsmyra.github.io.git"
+  },
+  "author": "Anthon <anthon.kendel@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arbetsmyra/arbetsmyra.github.io/issues"
+  },
+  "homepage": "https://github.com/arbetsmyra/arbetsmyra.github.io#readme"
+}
