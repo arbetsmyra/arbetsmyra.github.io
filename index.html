@@ -1,28 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="arbetsmyra.css" />
-    <title>Arbetsmyra</title>
-  </head>
-  <body>
-    <main>
-      <div class="flex flex-center flex-column">
-        <div class="flex-item start">
-          <h1 class="title">Arbetsmyra</h1>
-          <p class="subtitle">
-            Arbeysmyra is a project that aims to provide resources, packages,
-            and tools to improve the everyday work of a developer. We encourage
-            you to join, be active and contribute to improving the project.
-          </p>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="arbetsmyra.css" />
+  <title>Arbetsmyra</title>
+</head>
+
+<body>
+  <main>
+    <div class="flex flex-center flex-column">
+      <div class="flex-item start">
+        <h1 class="title text-align-center">Arbetsmyra</h1>
+        <p class="subtitle text-align-center">
+          Arbeysmyra is a project that aims to provide resources, packages,
+          and tools to improve the everyday work of a developer. We encourage
+          you to join, be active and contribute to improving the project.
+        </p>
       </div>
-    </main>
-  </body>
+    </div>
+
+    <div class="flex flex-center flex-column">
+      <div class="flex-item resources text-align-center">
+        <h2 class="text-align-center">Resources</h2>
+        <ul class="resources-list text-align-center"></ul>
+      </div>
+    </div>
+  </main>
+</body>
+
 </html>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const resources = [
+    {
+      text: 'Arbetsmyra',
+      url: 'https://github.com/arbetsmyra'
+    },
+    {
+      text: 'eslint-config',
+      url: 'https://github.com/arbetsmyra/eslint-config'
+    },
+    {
+      text: 'arbetsmyra.github.io',
+      url: 'https://github.com/arbetsmyra/arbetsmyra.github.io'
+    },
+    {
+      text: 'README-template',
+      url: 'https://github.com/arbetsmyra/README-template'
+    }
+  ];
+
+  const ul = document.querySelector('.resources-list');
+  resources.forEach(function (resource) {
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    a.textContent = resource.text;
+    a.setAttribute('href', resource.url);
+    a.setAttribute('target', '_blank');
+    li.appendChild(a);
+
+    ul.appendChild(li);
+  });
+});
+</script>
